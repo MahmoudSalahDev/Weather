@@ -1,0 +1,345 @@
+:root {
+    --color-dark: #1e202b;
+    --color-blue: #009ad8;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+}
+
+body {
+    color: #bfc1c8;
+    font-family: "Roboto", sans-serif;
+}
+
+/* start nav */
+nav.bg-body-tertiary {
+    background-color: var(--color-dark) !important;
+    padding: 50px 0;
+}
+
+nav .navbar-brand {
+    display: flex;
+    color: inherit;
+}
+
+.navbar-brand:hover {
+    color: inherit;
+}
+
+nav .navbar-brand img {
+    width: 64px;
+    height: 38px;
+    margin-right: 10px;
+}
+
+nav .navbar-brand div {
+    display: flex;
+    flex-direction: column;
+}
+
+nav .navbar-brand div h1 {
+    font-size: 16px;
+    margin-bottom: 5px;
+    color: white;
+}
+
+nav .navbar-brand div span {
+    font-size: 10px;
+
+}
+
+/* start links */
+nav .navbar-nav .nav-item .nav-link {
+    color: white;
+    font-size: 14px;
+    padding: 5px 25px;
+    border: 2px solid transparent;
+    border-radius: 25px;
+    margin: 0 5px;
+}
+
+@media screen and (max-width:991px) {
+    nav .navbar-nav .nav-item .nav-link {
+        text-align: center;
+        border-bottom: 1px solid grey;
+        border-radius: 0;
+        margin: 0;
+        background-color: #262936;
+        padding: 20px;
+        transition: 0;
+    }
+
+}
+
+
+
+nav .navbar-nav .nav-item .nav-link.active,
+nav .navbar-nav .nav-item .nav-link:hover {
+    color: var(--color-blue);
+    border: 2px solid var(--color-blue);
+    border-radius: 25px;
+}
+
+@media screen and (max-width:991px) {
+    nav .navbar-nav .nav-item .nav-link.active {
+        border-radius: 0px;
+        border: none;
+        border-bottom: 1px solid grey;
+    }
+
+    nav .navbar-nav .nav-item .nav-link.active:hover {
+        border: 2px solid var(--color-blue);
+
+    }
+
+    nav .navbar-nav .nav-item .nav-link:hover {
+        border-radius: 0px;
+
+    }
+}
+
+/* end links */
+/* start toggler */
+nav .navbar-toggler {
+    border: 2px solid transparent;
+    padding: 23px 20px;
+    border-radius: 40px;
+    transition: border 0.2s;
+
+}
+
+nav .navbar-toggler:hover {
+    border: 2px solid var(--color-blue);
+
+}
+
+.navbar-toggler:focus {
+    box-shadow: none;
+}
+
+nav .navbar-toggler span.navbar-toggler-icon {
+    background-image: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 14px;
+    transition: color 0.2s;
+}
+
+nav .navbar-toggler:hover span.navbar-toggler-icon {
+    color: var(--color-blue);
+}
+
+/* end toggler */
+/* end nav */
+/* start search input */
+main .banner {
+    background-image: url(../images/banner.png);
+    min-height: 350px;
+    padding: 70px 0;
+}
+
+main .search {
+    position: relative;
+
+}
+
+main .search input#findInput {
+    outline: none;
+    padding: 20px 50px 20px 20px;
+    background-color: var(--color-dark);
+    border: none;
+    border-radius: 30px;
+    font-size: 14px;
+    color: white;
+}
+
+main .search button#findBtn {
+    position: absolute;
+    color: white;
+    top: 5px;
+    right: 5px;
+    bottom: 5px;
+    border: none;
+    outline: none;
+    border-radius: 30px;
+    padding: 0 40px;
+    background-color: var(--color-blue);
+}
+
+/* end search input */
+/* start weather */
+.weather {
+    background-color: var(--color-dark);
+    max-height: 344px;
+}
+
+@media screen and (max-width:991px) {
+    .weather {
+        max-height: none;
+
+    }
+}
+
+.weather .row {
+    border-radius: 10px;
+    overflow: hidden;
+    transform: translateY(-150px);
+}
+
+.weather .row>.col-lg-4 {
+    padding-left: 0;
+    padding-right: 0;
+
+}
+
+
+.weather .row .today .now {
+    background-color: #2d303d;
+    padding: 10px;
+}
+
+.weather .row .today .data {
+    padding: 30px 20px;
+    background-color: #323544;
+}
+
+.weather .row .today .data .location {
+    font-size: 18px;
+}
+
+.weather .row .today .data .number {
+    font-size: 90px;
+    font-weight: 600;
+    color: white;
+    margin-right: 30px;
+}
+
+.weather .row .today .data>img {
+    width: 90px;
+}
+
+.weather .row .today .data>.state {
+    margin: 20px 0;
+    color: var(--color-blue);
+}
+
+.weather .row .today .data>.info span {
+    font-size: 14px;
+    margin-right: 20px;
+}
+
+.weather .row .col-lg-4:nth-child(2) {
+    background-color: #262936;
+}
+
+.weather .row .col-lg-4:nth-child(3) {
+    background-color: #323544;
+}
+
+.weather .row .tomorrow .now {
+    background-color: #222530;
+    padding: 10px;
+}
+
+.weather .row .next .now {
+    background-color: #2d303d;
+    padding: 10px;
+}
+
+.weather .row .tomorrow .data,
+.weather .row .next .data {
+    padding: 50px 20px 10px;
+}
+
+.weather .row .tomorrow .data .degree,
+.weather .row .next .data .degree {
+    font-size: 24px;
+    color: white;
+    font-weight: 600;
+}
+
+.weather .row .tomorrow .data .state,
+.weather .row .next .data .state {
+    color: var(--color-blue);
+    margin: 20px 0;
+}
+
+/* end weather */
+/* start dontact */
+.contact {
+    background-color: #262936;
+}
+
+.contact .search {
+    position: relative;
+}
+
+.contact .search .subInput {
+    outline: none;
+    padding: 20px 100px 20px 20px;
+    background-color: var(--color-dark);
+    border: none;
+    border-radius: 30px;
+    font-size: 14px;
+    color: white;
+}
+
+.contact .search .subBtn {
+    position: absolute;
+    color: white;
+    top: 5px;
+    right: 5px;
+    bottom: 5px;
+    border: none;
+    outline: none;
+    border-radius: 30px;
+    padding: 0 40px;
+    background-color: var(--color-blue);
+}
+
+.contact .links {
+    display: flex;
+    justify-content: end;
+    gap: 5px;
+}
+
+@media screen and (max-width:991px) {
+    .contact .links {
+        margin-top: 30px;
+        justify-content: center;
+
+    }
+}
+
+.contact .links a i {
+    color: var(--color-blue);
+    font-size: 18px;
+    background-color: var(--color-dark);
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    transition: color 0.3s, background-color 0.3s;
+}
+
+.contact .links a:hover i {
+    color: white;
+    background-color: var(--color-blue);
+}
+
+.contact .copyright {
+    font-size: 14px;
+    margin-top: 25px;
+}
+
+/* end dontact */
